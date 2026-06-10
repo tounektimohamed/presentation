@@ -749,7 +749,7 @@ export default function SlideTemplates({
             className="md:col-span-4 rounded-xl overflow-hidden border border-white/10 shadow-lg relative group h-[200px] md:h-auto min-h-[160px]"
           >
             <img
-              src="/src/assets/images/fares_residence_1781116048439.png"
+              src="/assets/images/fares_residence_1781116048439.png"
               alt="Résidence Farès"
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -812,10 +812,10 @@ export default function SlideTemplates({
           <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
             {currentSlide.data.affiches.map((aff: any, idx: number) => {
               const imgUrl = 
-                aff.title.toLowerCase().includes("global") ? "/src/assets/images/global_projects_1781116099624.png" :
-                aff.title.toLowerCase().includes("farès") || aff.title.toLowerCase().includes("fares") ? "/src/assets/images/fares_residence_1781116048439.png" :
-                aff.title.toLowerCase().includes("arcades") ? "/src/assets/images/arcades_residence_1781116064218.png" :
-                aff.title.toLowerCase().includes("médina") || aff.title.toLowerCase().includes("medina") ? "/src/assets/images/medina_residence_1781116080444.png" : "";
+                aff.title.toLowerCase().includes("global") ? "/assets/images/global_projects_1781116099624.png" :
+                aff.title.toLowerCase().includes("farès") || aff.title.toLowerCase().includes("fares") ? "/assets/images/fares_residence_1781116048439.png" :
+                aff.title.toLowerCase().includes("arcades") ? "/assets/images/arcades_residence_1781116064218.png" :
+                aff.title.toLowerCase().includes("médina") || aff.title.toLowerCase().includes("medina") ? "/assets/images/medina_residence_1781116080444.png" : "";
 
               return (
                 <motion.div
@@ -872,21 +872,23 @@ export default function SlideTemplates({
           <span className="text-[10px] text-white/40 uppercase block font-mono">Séquencier Vidéo CapCut de Promotion Immobilière (Aperçu direct sans défilement) :</span>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             {currentSlide.data.videos.map((vid: any, idx: number) => {
-              const videoImgUrl = 
-                idx === 2 ? "/src/assets/images/arcades_residence_1781116064218.png" :
-                "/src/assets/images/fares_residence_1781116048439.png";
+              const videoUrls = [
+                "/videos/fares-appartement.mp4",
+                "/videos/salle-de-sport.mp4",
+                "/videos/triplex-arcades.mp4"
+              ];
               return (
                 <div key={vid.id} className="bg-[#122240] border border-[#D1A153]/15 rounded-xl overflow-hidden flex flex-col justify-between">
-                  {/* Card Image Header */}
-                  <div className="h-[90px] relative">
-                    <img
-                      src={videoImgUrl}
-                      alt={vid.title}
-                      referrerPolicy="no-referrer"
-                      className="w-full h-full object-cover"
+                  {/* Card Video Header */}
+                  <div className="h-[200px] relative bg-black">
+                    <video
+                      src={videoUrls[idx]}
+                      className="w-full h-full object-contain"
+                      controls
+                      preload="metadata"
+                      playsInline
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#122240] to-transparent opacity-85" />
-                    <div className="absolute top-2 left-2 bg-black/60 px-1.5 py-0.5 rounded font-mono text-[8px] text-[#D1A153] uppercase font-bold">
+                    <div className="absolute top-2 left-2 bg-black/80 px-1.5 py-0.5 rounded font-mono text-[8px] text-[#D1A153] uppercase font-bold z-10">
                       {vid.duration}
                     </div>
                   </div>
@@ -1205,7 +1207,7 @@ export default function SlideTemplates({
                           
                           {/* Apartment render inside bubble */}
                           <div className="rounded overflow-hidden border border-white/10 mt-1 h-14 bg-zinc-950/20">
-                            <img src="/src/assets/images/fares_residence_1781116048439.png" className="w-full h-full object-cover" />
+                            <img src="/assets/images/fares_residence_1781116048439.png" className="w-full h-full object-cover" />
                           </div>
                         </div>
                       </div>

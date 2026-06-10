@@ -318,6 +318,17 @@ export default function App() {
           </button>
           
           <span className="text-white/20">|</span>
+          <button
+            onClick={() => setShowSpeakingNotes(!showSpeakingNotes)}
+            className={`px-2.5 py-0.5 text-xs font-medium rounded-full transition-all duration-200 cursor-pointer ${
+              showSpeakingNotes
+                ? "bg-amber-500/20 text-amber-400 border border-amber-500/30"
+                : "text-white/50 hover:text-white hover:bg-white/[0.04]"
+            }`}
+          >
+            {showSpeakingNotes ? "Notes ✓" : "Notes"}
+          </button>
+          <span className="text-white/20">|</span>
           <div className="flex items-center bg-black/45 rounded-full px-1.5 py-0.5 border border-white/5 space-x-1">
             <span className="text-[9px] text-white/40 uppercase font-mono px-1">Texte</span>
             <button
@@ -734,6 +745,21 @@ export default function App() {
                     setViewMode={setViewMode}
                     setCalcBudget={setCalcBudget}
                   />
+
+                  {/* SPEAKING NOTES */}
+                  {showSpeakingNotes && currentSlide.speakingNotes && (
+                    <div className="relative z-10 mt-4 bg-amber-500/5 border border-amber-500/20 rounded-xl p-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <NotebookText className="w-4 h-4 text-amber-400" />
+                        <span className="text-[10px] font-mono text-amber-400 uppercase tracking-widest font-bold">
+                          Notes de Soutenance
+                        </span>
+                      </div>
+                      <p className="text-xs md:text-sm text-amber-100/90 leading-relaxed font-sans font-light">
+                        {currentSlide.speakingNotes}
+                      </p>
+                    </div>
+                  )}
 
                   {/* CARD FOOTER */}
                   <div className="border-t border-white/[0.05] pt-3 mt-6 flex flex-col md:flex-row md:items-center justify-between gap-3 text-xs text-white/40">
