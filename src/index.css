@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Montserrat", sans-serif;
+  
+  --color-gold-light: #F5F1E6;
+  --color-gold-brand: #D9B55E;
+  --color-navy-dark: #122240;
+  --color-navy-deep: #0B1528;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0B1528;
+}
+::-webkit-scrollbar-thumb {
+  background: #D9B55E;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F5F1E6;
+}
+
+/* Accessibility text size scaling */
+.slide-text-normal {
+  /* Default typography values */
+}
+
+/* LARGE TEXT OVERRIDES */
+.slide-text-large .text-[8.5px],
+.slide-text-large .text-[9px],
+.slide-text-large .text-[10px],
+.slide-text-large .text-[11px] {
+  font-size: 16px !important;
+}
+
+.slide-text-large .text-xs,
+.slide-text-large .text-[12px] {
+  font-size: 18px !important;
+}
+
+.slide-text-large .text-sm,
+.slide-text-large .text-[14px],
+.slide-text-large .text-[13px] {
+  font-size: 21px !important;
+}
+
+.slide-text-large .text-base,
+.slide-text-large .text-[16px] {
+  font-size: 24px !important;
+}
+
+.slide-text-large .text-lg,
+.slide-text-large .text-[18px] {
+  font-size: 28px !important;
+}
+
+.slide-text-large .text-xl,
+.slide-text-large .text-[20px] {
+  font-size: 32px !important;
+}
+
+.slide-text-large .text-2xl,
+.slide-text-large .text-[24px] {
+  font-size: 38px !important;
+}
+
+.slide-text-large .text-3xl {
+  font-size: 45px !important;
+}
+
+.slide-text-large .text-4xl {
+  font-size: 55px !important;
+}
+
+.slide-text-large p, 
+.slide-text-large li,
+.slide-text-large span:not(.font-mono),
+.slide-text-large button:not(.font-mono),
+.slide-text-large select,
+.slide-text-large h2 {
+  line-height: 1.55 !important;
+}
+
+/* X-LARGE TEXT OVERRIDES */
+.slide-text-xlarge .text-[8.5px],
+.slide-text-xlarge .text-[9px],
+.slide-text-xlarge .text-[10px],
+.slide-text-xlarge .text-[11px] {
+  font-size: 20px !important;
+}
+
+.slide-text-xlarge .text-xs,
+.slide-text-xlarge .text-[12px] {
+  font-size: 23px !important;
+}
+
+.slide-text-xlarge .text-sm,
+.slide-text-xlarge .text-[14px],
+.slide-text-xlarge .text-[13px] {
+  font-size: 26px !important;
+}
+
+.slide-text-xlarge .text-base,
+.slide-text-xlarge .text-[16px] {
+  font-size: 30px !important;
+}
+
+.slide-text-xlarge .text-lg,
+.slide-text-xlarge .text-[18px] {
+  font-size: 34px !important;
+}
+
+.slide-text-xlarge .text-xl,
+.slide-text-xlarge .text-[20px] {
+  font-size: 40px !important;
+}
+
+.slide-text-xlarge .text-2xl,
+.slide-text-xlarge .text-[24px] {
+  font-size: 48px !important;
+}
+
+.slide-text-xlarge .text-3xl {
+  font-size: 58px !important;
+}
+
+.slide-text-xlarge .text-4xl {
+  font-size: 70px !important;
+}
+
+.slide-text-xlarge p, 
+.slide-text-xlarge li,
+.slide-text-xlarge span:not(.font-mono),
+.slide-text-xlarge button:not(.font-mono),
+.slide-text-xlarge select,
+.slide-text-xlarge h2 {
+  line-height: 1.6 !important;
+}
+
+/* XX-LARGE TEXT OVERRIDES */
+.slide-text-xxlarge .text-[8.5px],
+.slide-text-xxlarge .text-[9px],
+.slide-text-xxlarge .text-[10px],
+.slide-text-xxlarge .text-[11px] {
+  font-size: 24px !important;
+}
+
+.slide-text-xxlarge .text-xs,
+.slide-text-xxlarge .text-[12px] {
+  font-size: 28px !important;
+}
+
+.slide-text-xxlarge .text-sm,
+.slide-text-xxlarge .text-[14px],
+.slide-text-xxlarge .text-[13px] {
+  font-size: 32px !important;
+}
+
+.slide-text-xxlarge .text-base,
+.slide-text-xxlarge .text-[16px] {
+  font-size: 36px !important;
+}
+
+.slide-text-xxlarge .text-lg,
+.slide-text-xxlarge .text-[18px] {
+  font-size: 42px !important;
+}
+
+.slide-text-xxlarge .text-xl,
+.slide-text-xxlarge .text-[20px] {
+  font-size: 48px !important;
+}
+
+.slide-text-xxlarge .text-2xl,
+.slide-text-xxlarge .text-[24px] {
+  font-size: 58px !important;
+}
+
+.slide-text-xxlarge .text-3xl {
+  font-size: 70px !important;
+}
+
+.slide-text-xxlarge .text-4xl {
+  font-size: 82px !important;
+}
+
+.slide-text-xxlarge p, 
+.slide-text-xxlarge li,
+.slide-text-xxlarge span:not(.font-mono),
+.slide-text-xxlarge button:not(.font-mono),
+.slide-text-xxlarge select,
+.slide-text-xxlarge h2 {
+  line-height: 1.65 !important;
+}
+
+/* GIANT TEXT OVERRIDES */
+.slide-text-giant .text-[8.5px],
+.slide-text-giant .text-[9px],
+.slide-text-giant .text-[10px],
+.slide-text-giant .text-[11px] {
+  font-size: 28px !important;
+}
+
+.slide-text-giant .text-xs,
+.slide-text-giant .text-[12px] {
+  font-size: 32px !important;
+}
+
+.slide-text-giant .text-sm,
+.slide-text-giant .text-[14px],
+.slide-text-giant .text-[13px] {
+  font-size: 36px !important;
+}
+
+.slide-text-giant .text-base,
+.slide-text-giant .text-[16px] {
+  font-size: 40px !important;
+}
+
+.slide-text-giant .text-lg,
+.slide-text-giant .text-[18px] {
+  font-size: 48px !important;
+}
+
+.slide-text-giant .text-xl,
+.slide-text-giant .text-[20px] {
+  font-size: 56px !important;
+}
+
+.slide-text-giant .text-2xl,
+.slide-text-giant .text-[24px] {
+  font-size: 68px !important;
+}
+
+.slide-text-giant .text-3xl {
+  font-size: 80px !important;
+}
+
+.slide-text-giant .text-4xl {
+  font-size: 95px !important;
+}
+
+.slide-text-giant p, 
+.slide-text-giant li,
+.slide-text-giant span:not(.font-mono),
+.slide-text-giant button:not(.font-mono),
+.slide-text-giant select,
+.slide-text-giant h2 {
+  line-height: 1.70 !important;
+}
+
+

@@ -1,0 +1,6 @@
+{
+  "name": "SOROUBAT Présentation Digitale",
+  "description": "Plateforme interactive de présentation et de stratégie digitale pour le Groupe SOROUBAT Immobilier (Projet de Fin d'Études 2026)",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
